@@ -1,0 +1,95 @@
+-------------------------------Operadores Aritmeticos : 
+ + - * / 
+
+-------------------------------  Operadores Relacionales:
+-se utilizan para establecer una relacion entre dos valores 
+-compara dos valores entre si y esta comparacion prduce un resultado de true o false
+-comparan valores del mismo tipo (numericos o cadenas de caracteres)
+ 
+> mayor que 
+< menor que 
+>= mayor o igual que 
+<= menor o igual que 
+!= distinto 
+== igual 
+
+ejemplo :
+si a = 10 , b = 20 y c = 30 
+
+a + b > c  false
+a - b < c true 
+a - b == c false
+a * b != c true 
+
+-----------------------------------Operadores Logicos 
+- Estos operadores se utilizan para establecer relaciones entre valores logicos (true y false )
+- estos valores pueden ser el resultado de una expresion relacional 
+
+tenemos tres que son los principales operadores  : AND - OR - NOT 
+
+veamos las tablas de la verdad 
+ejemplo :
+si a = 10 , b = 20 y c = 30 
+
+
+ejercicio 1)
+(a < b ) and  (b < c) 
+   v     and     v
+          v  
+
+ejemplo 2:
+si a = 10 , b = 12 , c = 13 y d = 10 
+
+1) ((a > b ) or  (a < c ))  and  ((a == c ) or ( a >= b ))
+     ( f    or    v  )     and      ( f     or    f )
+             v             and              f   
+                           f  RESULTADO!
+
+2) ((a >= b) or (a < d))  and   ((a >= d) and (c > d))    
+       (f    or    f )    and      ( v    and    v )
+              f           and          v   
+                           f  RESULTADO!
+
+3) not (a==c) and (c > b)
+      not f   and   v 
+          v   and   v 
+		v  RESULTADO!
+
+
+---------------------------------------prioridad de los operadores en General
+1- ()
+2- * , / ,mod , 
+3- + , - , AND
+4- > ,< , >= , <= ,!= , ==
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
