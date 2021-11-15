@@ -96,6 +96,67 @@ public class AppPrincipal {
 		// invocamos al metodo tostring del objeto p1
 		System.out.println(p2.toString());
 
+		System.out.println("Creamos objetos mediante el metodo constructor con todos los parametros ");
+
+		Auto a4 = new Auto("verde", "citroen", "EGA 332", 2015, 2.0f);
+
+		System.out.println("Invocamos al metodo toString para conocer el estado del objeto a4");
+		System.out.println(a4.toString());
+
+		System.out.println("Creamos objetos mediante el metodo constructor con DOS parametros ");
+
+		Auto a5 = new Auto("Mercedez Benz", "ELK 453", 50);
+
+		System.out.println("Invocamos al metodo toString para conocer el estado del objeto a5");
+
+		System.out.println(a5.toString());
+
+		System.out.println("Utilizamos metodo para cargar combustible");
+		a5.cargarCombustible(25);
+
+		a5.cargarCombustible(15);
+
+		a5.cargarCombustible(25);
+		System.out.println("Invocamos al metodo toString para conocer el estado del objeto a5");
+
+		System.out.println(a5.toString());
+
+		// utilizamos el resto de los metodos de la clase Auto
+		a5.acelerar(60.0f);
+
+		a5.frenar();
+
+		int litrosQuePuedoCargar = a5.listroDisponiblesParaCargarCombustible();
+		System.out.println("me carga por favor " + litrosQuePuedoCargar + " litros de combustible");
+
+		a5.cargarCombustible(litrosQuePuedoCargar);
+
+		a5.acelerar(40.5f);
+		System.out.println(a5.toString());
+
+		// ejercicio
+		// 1) crear una instancia del tipo Auto con todos sus atributos cargados , luego
+		// llenar el tanque de combustible
+
+		Auto miauto = new Auto("verde", "citroen", "FFT 154", 2018, 2.5f, 100, 10);
+		System.out.println(miauto.toString());
+		
+		miauto.cargarCombustible(miauto.listroDisponiblesParaCargarCombustible());
+		
+		System.out.println(miauto.toString());
+		
+		// 2) crear una instancia del tipo Persona con todos sus atributos cargados ,
+		// luego definir un metodo que permita a las personas "caminar" otro metodo que permita "ver un
+		// programa de TV"
+
+		
+		Persona pepe = new Persona("Marce", "Del Carpio", 45, 1993);
+	
+	    pepe.caminar("Puerto Madero");
+	    
+	    pepe.verProgramaTv("Almorzando con Mirta");
+	    
+	    System.out.println(pepe.toString());
 	}
 
 }
