@@ -12,7 +12,6 @@ public class Entrenador extends SeleccionFutbol {
 	public Entrenador(int id, String nombre, String apellido, int edad, String idFederacion) {
 		// imvocamos al constructor de la clase padre con "super"
 		super(id, nombre, apellido, edad);
-		this.edad = edad;
 		this.idFederacion = idFederacion;
 	}
 
