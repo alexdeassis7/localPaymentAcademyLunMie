@@ -45,8 +45,26 @@ public class Conexion {
 
 	}
 
+	// metodo para obtener el objeto con la conexion a la db
+	public Connection getConnection() {
+		return conn;
+	}
+
+	public void desconectar() {
+		if (conn != null) {
+			try {
+				conn.close();
+				System.out.println("Se cerro la conexion a la base " + db + " exitosamente!");
+			} catch (SQLException e) {
+				System.out.println("Sucedio un  error al intentar cerrar la conexion con la db " + db);
+				e.printStackTrace();
+			}
+		}
+	}
+
 	public static void main(String[] args) {
 		Conexion connMySql = new Conexion();
+		connMySql.desconectar();
 	}
 
 }
