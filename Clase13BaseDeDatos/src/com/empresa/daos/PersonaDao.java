@@ -121,9 +121,30 @@ public class PersonaDao {
 	}
 
 	public void borrarPersona(String codigo) {
-// hacerlo y probar de tarea 
-		
-		//estatuto.executeUpdate("DELETE FROM persona WHERE id='"+codigo+"'");
+
+		if (buscarPersona(Integer.parseInt(codigo)) != null) { // valido que exista ese id en la base
+
+			// me conecto a la base de datos
+			Conexion conex = new Conexion();
+
+			try {
+				
+				Statement estatuto = conex.getConnection().createStatement();
+
+				estatuto.executeUpdate("DELETE FROM persona WHERE id = '" + codigo + "'");
+				JOptionPane.showMessageDialog(null, "se ah eliminado Correctamente", "Infromacion",
+						JOptionPane.INFORMATION_MESSAGE);
+				estatuto.close();
+				conex.desconectar();
+
+			} catch (Exception e) {
+				System.out.println(e.getMessage());
+				JOptionPane.showMessageDialog(null, "No se elimino el registro");
+			}
+			
+		} else {
+			JOptionPane.showMessageDialog(null, "No Existia el registro con id " + codigo);
+		}
 	}
 
 }

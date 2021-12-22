@@ -11,6 +11,17 @@ public class AppPrincipal {
 		System.out.println("Inicio de la app");
 		PersonaDao pDao = new PersonaDao();
 
+		
+		// solicitamos los datos al user
+		String idaBorrar = JOptionPane.showInputDialog("Ingrese la id de la persona que quiere borrar en el sistema");
+		
+		
+		pDao.borrarPersona(idaBorrar);
+		
+		
+		
+		
+		
 		// solicitamos los datos al user
 		Integer idaBuscar = Integer
 				.parseInt(JOptionPane.showInputDialog("Ingrese la id de la persona que quiere buscar en el sistema"));
@@ -35,6 +46,10 @@ public class AppPrincipal {
 		// pDao.registrarPersona(pvo);
 		pDao.modificarPersona(pvo);
 
+		
+		
+		
+		
 		System.out.println("Fin de la app");
 	}
 
