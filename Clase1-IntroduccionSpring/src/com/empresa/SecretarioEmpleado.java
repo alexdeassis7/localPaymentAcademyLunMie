@@ -1,17 +1,25 @@
 package com.empresa;
 
-public class SecretarioEmpleado implements Empleados{
+public class SecretarioEmpleado implements Empleados {
+
+	private CreacionInformes informeNuevo;
 
 	@Override
 	public String getTareas() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Soy un secretario y me gusta obedecer ordenes de mis superiores";
 	}
 
 	@Override
 	public String getInformes() {
-		// TODO Auto-generated method stub
-		return null;
+		return "";
+	}
+
+	// Inyeccion de dependencia mediante el sstters
+	// generamos un setter para poder usar la inyeccion de dependencias mediante el
+	// tag "property "
+
+	public void setInformeNuevo(CreacionInformes informeNuevo) {
+		this.informeNuevo = informeNuevo;
 	}
 
 }

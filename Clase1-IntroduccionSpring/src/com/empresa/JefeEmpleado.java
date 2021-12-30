@@ -4,14 +4,12 @@ public class JefeEmpleado implements Empleados{
 
 	@Override
 	public String getTareas() {
-		// TODO Auto-generated method stub
-		return null;
+		return "Soy el jefe , y encargado de todos , asi que o me obedecen o renuncian";
 	}
 
 	@Override
 	public String getInformes() {
-		// TODO Auto-generated method stub
-		return null;
+		return "";
 	}
 
 }
